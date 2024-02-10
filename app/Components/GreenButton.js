@@ -2,6 +2,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import {
   responsiveHeight,
+  responsiveScreenHeight,
   responsiveScreenWidth,
   responsiveWidth,
 } from "react-native-responsive-dimensions";
@@ -20,7 +21,7 @@ export default GreenButton;
 
 const styles = StyleSheet.create({
   mainContainer: {
-    // width: responsiveScreenWidth(100),
+    marginTop: responsiveScreenHeight(1),
   },
   button: {
     width: responsiveScreenWidth(20),

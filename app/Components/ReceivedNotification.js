@@ -33,15 +33,13 @@ const ReceivedNotification = () => {
 
             {/* Notification coming time */}
             <Text style={{ color: "rgba(102, 102, 102, 1)" }}>4 hour ago</Text>
+            <LightGreenButton />
           </View>
         </View>
         {/* User active sign Dot */}
         <View style={styles.activeDot}></View>
       </View>
       {/* Button */}
-      <View style={styles.buttonContainer}>
-        <LightGreenButton />
-      </View>
     </View>
   );
 };
@@ -87,11 +85,5 @@ const styles = StyleSheet.create({
     width: responsiveWidth(2.8),
     height: responsiveWidth(2.8),
     borderRadius: 100,
-  },
-  buttonContainer: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: responsiveWidth(3),
   },
 });
