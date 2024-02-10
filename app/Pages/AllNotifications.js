@@ -26,7 +26,7 @@ const AllNotifications = () => {
       <ReceivedNotification
         userName="MS"
         profileImage={man1}
-        time="2 November 2023  12:30 PM"
+        time="12 November 2023  12:30 PM"
       />
       <RequestNotification
         userName="AR"
