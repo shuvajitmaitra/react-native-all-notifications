@@ -16,7 +16,7 @@ const Home = ({ navigation }) => {
       }}
     >
       <TouchableOpacity
-        onPress={() => navigation.navigate("Notification")}
+        onPress={() => navigation.navigate("AllNotifications")}
         style={{
           backgroundColor: "#27ac1f",
           width: responsiveScreenWidth(50),
