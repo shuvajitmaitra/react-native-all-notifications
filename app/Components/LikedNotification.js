@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, Image } from "react-native";
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
 import {
+  responsiveFontSize,
   responsiveHeight,
   responsiveScreenHeight,
   responsiveScreenWidth,
@@ -24,7 +24,7 @@ const LikedNotification = () => {
           <View style={styles.messageContainer}>
             <Text style={styles.profileName}>SA </Text>
 
-            <Text style={{ color: "rgba(102, 102, 102, 1)" }}>
+            <Text style={{ color: "rgba(102, 102, 102, 1)", fontSize: 20 }}>
               liked your post
             </Text>
           </View>
@@ -43,10 +43,14 @@ const LikedNotification = () => {
 export default LikedNotification;
 const styles = StyleSheet.create({
   container: {
+    paddingTop: responsiveHeight(2),
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    // backgroundColor: "red",
+    borderStyle: "solid",
+    borderBottomWidth: 1,
+    borderBottomColor: "rgba(102, 102, 102, 0.5)",
+    paddingBottom: responsiveScreenHeight(1),
   },
   subContainer: {
     flexDirection: "row",
@@ -65,14 +69,15 @@ const styles = StyleSheet.create({
   },
   profileName: {
     fontWeight: "bold",
+    fontSize: responsiveFontSize(2),
   },
   textContainer: {
     marginLeft: responsiveScreenWidth(4),
   },
   activeDot: {
     backgroundColor: "#27ac1f",
-    width: responsiveWidth(2.5),
-    height: responsiveWidth(2.5),
+    width: responsiveWidth(2.8),
+    height: responsiveWidth(2.8),
     borderRadius: 100,
   },
 });
