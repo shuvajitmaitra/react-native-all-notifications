@@ -7,11 +7,11 @@ import {
   responsiveWidth,
 } from "react-native-responsive-dimensions";
 
-const LightGreenButton = ({ lightGreen }) => {
+const LightGreenButton = ({ props }) => {
   return (
     <View style={styles.mainContainer}>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Button</Text>
+        <Text style={styles.buttonText}>{props}</Text>
       </TouchableOpacity>
     </View>
   );
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     marginTop: responsiveScreenHeight(1),
   },
   button: {
-    width: responsiveScreenWidth(20),
+    width: responsiveScreenWidth(26),
     backgroundColor: "rgba(39, 172, 31, 0.1)",
     borderRadius: responsiveWidth(1),
   },

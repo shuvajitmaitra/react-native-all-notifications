@@ -10,40 +10,42 @@ import {
 import LightGreenButton from "./LightGreenButton";
 import GreenButton from "./GreenButton";
 
-const RequestNotification = () => {
+const RequestNotification = ({ userName, time, profileImage }) => {
   return (
     <View style={styles.mainContainer}>
       <View style={styles.container}>
         {/* Sub Container Start from here */}
         <View style={styles.subContainer}>
           {/* Profile image */}
-          <Image
-            style={styles.profileImage}
-            source={require("../../assets/man1.png")}
-          />
+          <Image style={styles.profileImage} source={profileImage} />
 
           <View style={styles.textContainer}>
             {/* Profile Message */}
             <View style={styles.messageContainer}>
-              <Text style={styles.profileName}>SA </Text>
+              <Text style={styles.profileName}>{userName} </Text>
 
-              <Text style={{ color: "rgba(102, 102, 102, 1)", fontSize: 20 }}>
+              <Text
+                style={{
+                  color: "rgba(102, 102, 102, 1)",
+                  fontSize: responsiveFontSize(2),
+                }}
+              >
                 sent you a send request
               </Text>
             </View>
 
             {/* Notification coming time */}
-            <Text style={{ color: "rgba(102, 102, 102, 1)" }}>4 hour ago</Text>
-            <View style={styles.buttonContainer}>
-              <GreenButton />
-              <LightGreenButton />
-            </View>
+            <Text style={{ color: "rgba(102, 102, 102, 1)" }}>{time}</Text>
           </View>
         </View>
         {/* User active sign Dot */}
         <View style={styles.activeDot}></View>
       </View>
       {/* Button */}
+      <View style={styles.buttonContainer}>
+        <GreenButton props="Accept" />
+        <LightGreenButton props="Decline" />
+      </View>
     </View>
   );
 };
@@ -93,5 +95,6 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: "row",
     gap: responsiveWidth(3),
+    marginLeft: responsiveScreenWidth(19),
   },
 });

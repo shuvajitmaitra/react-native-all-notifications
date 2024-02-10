@@ -7,11 +7,11 @@ import {
   responsiveWidth,
 } from "react-native-responsive-dimensions";
 
-const GreenButton = () => {
+const GreenButton = ({ props }) => {
   return (
     <View style={styles.mainContainer}>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Button</Text>
+        <Text style={styles.buttonText}>{props}</Text>
       </TouchableOpacity>
     </View>
   );

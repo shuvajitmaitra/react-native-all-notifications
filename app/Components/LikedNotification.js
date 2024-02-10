@@ -8,29 +8,31 @@ import {
   responsiveWidth,
 } from "react-native-responsive-dimensions";
 
-const LikedNotification = () => {
+const LikedNotification = ({ userName, time, profileImage }) => {
   return (
     <View style={styles.container}>
       {/* Sub Container Start from here */}
       <View style={styles.subContainer}>
         {/* Profile image */}
-        <Image
-          style={styles.profileImage}
-          source={require("../../assets/man1.png")}
-        />
+        <Image style={styles.profileImage} source={profileImage} />
 
         <View style={styles.textContainer}>
           {/* Profile Message */}
           <View style={styles.messageContainer}>
-            <Text style={styles.profileName}>SA </Text>
+            <Text style={styles.profileName}>{userName} </Text>
 
-            <Text style={{ color: "rgba(102, 102, 102, 1)", fontSize: 20 }}>
+            <Text
+              style={{
+                color: "rgba(102, 102, 102, 1)",
+                fontSize: responsiveFontSize(2),
+              }}
+            >
               liked your post
             </Text>
           </View>
 
           {/* Notification coming time */}
-          <Text style={{ color: "rgba(102, 102, 102, 1)" }}>4 hour ago</Text>
+          <Text style={{ color: "rgba(102, 102, 102, 1)" }}>{time}</Text>
         </View>
       </View>
 
@@ -73,6 +75,7 @@ const styles = StyleSheet.create({
   },
   textContainer: {
     marginLeft: responsiveScreenWidth(4),
+    fontSize: responsiveFontSize(5),
   },
   activeDot: {
     backgroundColor: "#27ac1f",
