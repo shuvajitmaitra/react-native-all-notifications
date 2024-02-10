@@ -1,4 +1,4 @@
-import { Text, TouchableOpacity } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import {
@@ -8,7 +8,7 @@ import {
 
 const Home = ({ navigation }) => {
   return (
-    <SafeAreaView
+    <View
       style={{
         alignItems: "center",
         justifyContent: "center",
@@ -27,7 +27,7 @@ const Home = ({ navigation }) => {
       >
         <Text style={{ color: "#ffff" }}>Notification</Text>
       </TouchableOpacity>
-    </SafeAreaView>
+    </View>
   );
 };
 

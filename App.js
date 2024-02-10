@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import Home from "./app/Pages/Home";
-import AllNotifications from "./app/Components/AllNotifications";
+import AllNotifications from "./app/Pages/AllNotifications";
 
 const Stack = createNativeStackNavigator();
 export default function App() {
