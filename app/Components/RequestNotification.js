@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     borderStyle: "solid",
     borderBottomWidth: 1,
     borderBottomColor: "rgba(102, 102, 102, 0.5)",
-    paddingBottom: responsiveScreenHeight(1),
+    paddingBottom: responsiveScreenHeight(1.5),
   },
   container: {
     paddingTop: responsiveHeight(2),

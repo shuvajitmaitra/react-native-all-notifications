@@ -3,12 +3,14 @@ import React from "react";
 import LikedNotification from "../Components/LikedNotification";
 import { responsiveScreenWidth } from "react-native-responsive-dimensions";
 import RequestNotification from "../Components/RequestNotification";
+import InactiveLikedNotification from "../Components/InactiveLikedNotification";
 
 const AllNotifications = () => {
   return (
     <View style={styles.container}>
       <LikedNotification />
       <RequestNotification />
+      <InactiveLikedNotification />
     </View>
   );
 };

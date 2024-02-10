@@ -8,7 +8,7 @@ import {
   responsiveWidth,
 } from "react-native-responsive-dimensions";
 
-const LikedNotification = () => {
+const InactiveLikedNotification = () => {
   return (
     <View style={styles.container}>
       {/* Sub Container Start from here */}
@@ -16,7 +16,7 @@ const LikedNotification = () => {
         {/* Profile image */}
         <Image
           style={styles.profileImage}
-          source={require("../../assets/man1.png")}
+          source={require("../../assets/man2.png")}
         />
 
         <View style={styles.textContainer}>
@@ -33,14 +33,11 @@ const LikedNotification = () => {
           <Text style={{ color: "rgba(102, 102, 102, 1)" }}>4 hour ago</Text>
         </View>
       </View>
-
-      {/* User active sign Dot */}
-      <View style={styles.activeDot}></View>
     </View>
   );
 };
 
-export default LikedNotification;
+export default InactiveLikedNotification;
 const styles = StyleSheet.create({
   container: {
     paddingTop: responsiveHeight(2),
@@ -59,7 +56,7 @@ const styles = StyleSheet.create({
   profileImage: {
     height: responsiveHeight(8),
     width: responsiveWidth(15),
-    resizeMode: "contain",
+    resizeMode: "cover",
     borderRadius: 200,
   },
   messageContainer: {
@@ -73,11 +70,5 @@ const styles = StyleSheet.create({
   },
   textContainer: {
     marginLeft: responsiveScreenWidth(4),
-  },
-  activeDot: {
-    backgroundColor: "#27ac1f",
-    width: responsiveWidth(2.8),
-    height: responsiveWidth(2.8),
-    borderRadius: 100,
   },
 });
