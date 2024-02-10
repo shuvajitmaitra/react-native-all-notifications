@@ -1,17 +1,22 @@
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import LikedNotification from "../Components/LikedNotification";
 import { responsiveScreenWidth } from "react-native-responsive-dimensions";
 import RequestNotification from "../Components/RequestNotification";
 import InactiveLikedNotification from "../Components/InactiveLikedNotification";
+import ReceivedNotification from "../Components/ReceivedNotification";
 
 const AllNotifications = () => {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <LikedNotification />
       <RequestNotification />
       <InactiveLikedNotification />
-    </View>
+      <LikedNotification />
+      <ReceivedNotification />
+      <RequestNotification />
+      <LikedNotification />
+    </ScrollView>
   );
 };
 
